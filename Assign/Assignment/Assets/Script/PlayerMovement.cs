@@ -107,6 +107,10 @@ public class PlayerMovement : MonoBehaviour
     void ProcessMove()
     {
         playerVector = verticalVector * Time.deltaTime + horizontalVector;
+         if (horizontalVector != Vector3.zero)
+        {
+            gameObject.transform.forward = horizontalVector;
+        }
         controller.Move(playerVector);
     }
 
@@ -165,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
 
     float GetSpeed()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetKey(KeyCode.Mouse1))
             return runSpeed;
         else return walkSpeed;
     }

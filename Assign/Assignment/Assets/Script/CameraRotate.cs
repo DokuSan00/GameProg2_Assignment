@@ -13,7 +13,7 @@ public class CameraRotate : MonoBehaviour
     {
         turn.x += Input.GetAxis("Mouse X") * sensitivity;
         turn.y += Input.GetAxis("Mouse Y") * sensitivity;
-        transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
-        transform.parent.localRotation = Quaternion.Euler(0, turn.x, 0);
+        transform.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
+        // transform.localRotation = Quaternion.Euler(0, turn.x, 0);
     }
 }
