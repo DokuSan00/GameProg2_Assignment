@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    static int score = 0;
+    int curScore;
+    int lastCheckedScore = 0;
+    
 
     private void Awake() {
         if (Instance == null)
@@ -15,19 +17,20 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddScore() {
-        score += 50;
-        Debug.Log(score);
+        curScore += 50;
+        Debug.Log(curScore);
         Win();
     }
 
     public void Win() {
-        if (score >= 400) {
+        if (curScore >= 400) {
             Debug.Log("Win");
         }
     }
 
     public void Play() {
-        score = 0;
+        lastCheckedScore = 0;
+        curScore = lastCheckedScore;
         SceneManager.LoadScene(1);
     }
 
@@ -37,9 +40,11 @@ public class GameManager : MonoBehaviour
 
     public void NextScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        lastCheckedScore = curScore;
     }
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        curScore = lastCheckedScore;
     }
 }

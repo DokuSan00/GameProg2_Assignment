@@ -9,6 +9,9 @@ public class CubeBehaviour : MonoBehaviour
     public ParticleSystem powerParticleToSpawn;
     public ParticleSystem pointParticleToSpawn;
     private Vector3 pos;
+
+    float moveTime = 2;
+    Vector3 dir = Vector3.up;
     void Start()
     {
         rotationSpeed = 20.0f;
@@ -19,6 +22,15 @@ public class CubeBehaviour : MonoBehaviour
     {
         Vector3 curRotate = transform.eulerAngles;
         transform.localRotation = Quaternion.Euler(curRotate.x, curRotate.y + rotationSpeed * Time.deltaTime, curRotate.z);
+
+        if (gameObject.name == "Power_Cube") return;
+        transform.parent.transform.Translate(dir * Time.deltaTime, Space.World);
+        
+        moveTime -= Time.deltaTime;
+        if (moveTime <= 0) {
+            moveTime = 2;
+            dir *= -1;
+        }
     }
 
     private void OnTriggerEnter(Collider col) {

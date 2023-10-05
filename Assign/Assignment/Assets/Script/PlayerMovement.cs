@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement Instance;
     //speed
     public float mouseSen = 2.0f;
-    private float walkSpeed = 3.5f;
+    private float walkSpeed = 4.0f;
     private float runSpeed = 6.0f;
 
     public int maxJump;
@@ -140,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
     
     void ProcessMovementInput()
     {
-        float speed = Mathf.Clamp(GetSpeed() * animator.GetFloat("Speed"), 0.15f, GetSpeed());
+        float speed = Mathf.Clamp(GetSpeed() * animator.GetFloat("Speed") + 0.5f, 0.2f, GetSpeed());
 
         //Get camera vector
         Vector3 camForward = Camera.main.transform.forward;
