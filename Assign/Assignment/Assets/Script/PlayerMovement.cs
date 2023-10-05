@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement Instance;
     //speed
     public float mouseSen = 2.0f;
-    private float walkSpeed = 4.0f;
-    private float runSpeed = 6.0f;
+    private float walkSpeed = 3.5f;
+    private float runSpeed = 6.5f;
 
     public int maxJump;
     public bool isGround;
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     void DisableRootMotion() {
         animator.applyRootMotion = false;
     }
-    // Update is called once per frame
+
     void Update()
     {
         ProcessGravity();
@@ -76,7 +77,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void UpdateAnimation() {
-        animator.ResetTrigger("JumpTrigger");
+        
+        // animator.ResetTrigger("JumpTrigger");
         if (isGround) 
         {
             animator.SetBool("isGround", true);
@@ -98,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
         }
         //to handle multi jump
         if (jumpAni) {
+            animator.ResetTrigger("JumpTrigger");
             animator.SetTrigger("JumpTrigger");
             //set jumpAni back to false, allow next jump if available
             jumpAni = false;
