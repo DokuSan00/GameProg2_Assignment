@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     int curScore;
-    int lastCheckedScore = 50;
+    int lastCheckedScore = 0;
 
     Text scoreText;
 
@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
         { 
             Instance = this; 
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 0) return;
         DontDestroyOnLoad(Instance);
         updateText();
     }
@@ -34,8 +36,8 @@ public class GameManager : MonoBehaviour
             scoreText = GameObject.Find("Score").GetComponent<Text>();
     }
 
-    public void AddScore() {
-        curScore += 50;
+    public void AddScore(int score) {
+        curScore += score;
         Win();
     }
 

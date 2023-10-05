@@ -37,7 +37,10 @@ public class CubeBehaviour : MonoBehaviour
         if (col.tag != "Player") return;
         if (gameObject.name == "Point_Cube") { 
             Destroy(transform.parent.gameObject);
-            GameManager.Instance.AddScore();
+            int score = 50;
+            if (gameObject.transform.parent.gameObject.name == "Special Cube")
+                score = 300;
+            GameManager.Instance.AddScore(score);
             return;
         }
 

@@ -46,7 +46,7 @@ ParticleSystemForceField:
     m_StartRange: 0.5
     m_EndRange: 2
     m_Length: 1
-    m_GravityFocus: 0
+    m_GravityFocus: 0.2
     m_RotationRandomness: {x: 0, y: 0}
     m_DirectionCurveX:
       serializedVersion: 2
@@ -263,7 +263,7 @@ ParticleSystemForceField:
     m_RotationSpeedCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -369,7 +369,7 @@ ParticleSystemForceField:
     m_DragCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -536,11 +536,35 @@ PrefabInstance:
     m_TransformParent: {fileID: 6308102886876725012}
     m_Modifications:
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: lengthInSec
-      value: 5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.arc.spread
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: EmissionModule.m_BurstCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.alignToDirection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
@@ -548,12 +572,28 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.randomPositionAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.randomDirectionAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 10
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: ShapeModule.sphericalDirectionAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
@@ -569,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7498896295752766395, guid: 1ed982c29962d1e4f8f991b3b508ec7b, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
