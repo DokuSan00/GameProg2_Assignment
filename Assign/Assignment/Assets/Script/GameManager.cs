@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 0) return;
-        DontDestroyOnLoad(Instance);
+        // DontDestroyOnLoad(Instance);
         updateText();
     }
 
