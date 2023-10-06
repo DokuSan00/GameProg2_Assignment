@@ -45,6 +45,7 @@ public class TrapBehaviour : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
+        Debug.Log(col.tag);
         if (col.tag != "Player") return;
         GameManager.Instance.Restart();
     }
