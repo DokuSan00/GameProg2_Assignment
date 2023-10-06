@@ -2038,11 +2038,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: lengthInSec
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: autoRandomSeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
+      propertyPath: simulationSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: ShapeModule.type
@@ -2102,11 +2106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: LightsModule.rangeCurve.scalar
@@ -2114,7 +2118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 6
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: LightsModule.randomDistribution
@@ -2142,7 +2146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
@@ -2214,7 +2218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].time
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[1].time
@@ -2242,7 +2246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
-      value: 2
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5354757404627303357, guid: 8bfa97ad7450d8646bb019284975491f, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[1].repeatInterval
