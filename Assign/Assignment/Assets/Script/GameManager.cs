@@ -72,4 +72,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         curScore = lastCheckedScore;
     }
+
+    public void MainMenu() {
+        SceneManager.LoadScene(0);
+    }
 }
