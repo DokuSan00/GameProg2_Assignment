@@ -21,10 +21,7 @@ public class GameManager : MonoBehaviour
         { 
             Instance = this; 
         }
-
-        if (SceneManager.GetActiveScene().buildIndex == 0) return;
-        // DontDestroyOnLoad(Instance);
-        updateText();
+        DontDestroyOnLoad(Instance);
     }
 
     void Update() {
@@ -38,19 +35,13 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int score) {
         curScore += score;
-        Win();
     }
 
     void updateText() {
         if (SceneManager.GetActiveScene().buildIndex == 0) return;
         refText();
-        scoreText.text = "Score: " + curScore;
-    }
-
-    public void Win() {
-        if (curScore >= 400) {
-            Debug.Log("Win");
-        }
+        string s = scoreText.text;
+        scoreText.text = s[..s.LastIndexOf(' ')] + " " + curScore;
     }
 
     public void Play() {
