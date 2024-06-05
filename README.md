@@ -2,9 +2,9 @@
 # A simple platformer parkour game contains 3 levels and the goal is to reach the final stage and conquer the final challenge
 
 ## Features in game:
-&nbsp;Trap - Kills player upon contact  
-&nbsp;Point cube - Increase score upon picked up  
-&nbsp;Power cube - Gain an addition jump upon picked up
+* Trap - Kills player upon contact  
+* Point cube - Increase score upon picked up  
+* Power cube - Gain an addition jump upon picked up
 
 ## 3 levels context:
 * 1st - Teach player the controll and train them to be aware of traps.  
