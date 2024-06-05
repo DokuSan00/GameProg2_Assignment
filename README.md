@@ -1,5 +1,8 @@
 
-# A simple platformer parkour game contains 3 levels and the goal is to reach the final stage and conquer the final challenge
+# A simple platformer parkour game
+
+## Context:
+   The Game contains 3 levels and the goal is to reach the final stage and conquer the final challenge. The game will be about jumping, parkour-ing and pick ups cubes/goods for benefits.
 
 ## Features in game:
 * Trap - Kills player upon contact  
