@@ -8,7 +8,7 @@
 
 ## 3 levels context:
 * 1st - Teach player the controll and train them to be aware of traps.  
-&nbsp;2nd - Jump Profiency  
-&nbsp;&nbsp;There will be a jump challenge, where the player can gain a significant amount of points if successfully beat and pick up the mega point cube  
-&nbsp;3rd - Timing, Jump, Awareness Proficiency  
-&nbsp;&nbsp;+ The last round is hard for its fast pace, require the player to not stop moving and plan ahead how they should/will move.
+* 2nd - Jump Profiency  
+** There will be a jump challenge, where the player can gain a significant amount of points if successfully beat and pick up the mega point cube  
+* 3rd - Timing, Jump, Awareness Proficiency  
+** + The last round is hard for its fast pace, require the player to not stop moving and plan ahead how they should/will move.
